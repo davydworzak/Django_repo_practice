@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Movies</title>
-	</head>
-
 	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>Movies</title>
+		</head>
+		<form action='' method='POST'>
+			{% csrf_token %}
+			<input type="hidden" name="add" value="movie">
+			Movie Title: <input type="text" name="title"/>
+			<input type="submit" value="Submit" />
+		</form>
+		<form action='' method='POST'>
+			{% csrf_token %}
+			<input type="hidden" name="add" value="actor">
+			First Name: <input type="text" name="first_name"/>
+			Last Name: <input type="text" name="last_name"/>
+			<input type="submit" value="Submit" />
+		</form>
 		<h1>List of Movies</h1>
-	</body>
+		<h1>List of Actors</h1>
+	</body>	
 </html>
